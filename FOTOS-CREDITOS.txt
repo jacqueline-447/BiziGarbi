@@ -1,0 +1,11 @@
+Fotos de Pexels (https://www.pexels.com/license/): uso gratuito, también comercial, sin obligación de citar al autor.
+Archivo en img/            -> Página original
+hero.jpg                 -> https://www.pexels.com/photo/woman-cleaning-the-house-6195198/
+hogar.jpg                -> https://www.pexels.com/photo/a-man-working-from-home-and-a-woman-vacuuming-in-a-living-room-8055189/
+limpieza-a-fondo.jpg     -> https://www.pexels.com/photo/a-woman-holding-a-bottle-sprayer-3871614/
+mudanza.jpg              -> https://www.pexels.com/photo/a-happy-couple-moving-in-in-a-new-apartment-7647206/
+oficina.jpg              -> https://www.pexels.com/photo/man-cleaning-desk-10567271/
+productos-eco.jpg        -> https://www.pexels.com/photo/white-and-green-spray-bottle-12997255/
+fin-de-obra.jpg          -> https://www.pexels.com/photo/renovation-of-an-apartmetn-flat-9908376/
+txoko.jpg                -> https://www.pexels.com/photo/friends-having-delicious-dinner-with-drinks-served-on-wooden-table-5638730/
+bilbao-guggenheim.jpg    -> https://www.pexels.com/photo/guggenheim-museum-bilbao-14638004/
