@@ -21,27 +21,15 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Descargar fotos de Pexels
-        run: |
-          while read -r nombre id pagina; do
-            [ -z "$nombre" ] && continue
-            if [ -f "img/$nombre" ]; then echo "Ya existe img/$nombre"; continue; fi
-            echo "Descargando $nombre ($id)"
-            curl -fsSL -A "Mozilla/5.0" -o "img/$nombre" "https://images.pexels.com/photos/$id/pexels-photo-$id.jpeg?auto=compress&cs=tinysrgb&w=1600" \
-              || curl -fsSL -A "Mozilla/5.0" -o "img/$nombre" "https://www.pexels.com/photo/$id/download/?w=1600" \
-              || { rm -f "img/$nombre"; echo "::warning::No se pudo descargar $nombre ($pagina). La web usará la imagen de reserva."; }
-          done < fotos.txt
-          ls -la img
+      - uses: actions/checkout@v5
 
       - name: Preparar archivos de la web
         run: |
-          mkdir -p _site
-          cp -r index.html privacidad.html img .nojekyll CNAME robots.txt sitemap.xml _site/
+          mkdir _site
+          cp -r index.html privacidad.html img CNAME robots.txt sitemap.xml _site/
 
       - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: _site
       - id: deployment

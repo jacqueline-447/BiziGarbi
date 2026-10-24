@@ -1,11 +1,28 @@
-# Bizi Garbi · Limpieza ecológica en Bilbao
+# Bizi Garbi
 
-Web estática (HTML, CSS y JavaScript) publicada con GitHub Pages.
+Web de **Bizi Garbi**, limpieza ecológica en Bilbao: [bizigarbi.com](https://bizigarbi.com)
 
-- `index.html`: la web.
-- `privacidad.html`: aviso legal y política de privacidad.
-- `img/`: logo e imágenes.
-- `fotos.txt`: fotos de Pexels que se descargan automáticamente al publicar (ver `FOTOS-CREDITOS.txt`).
-- Formulario de presupuesto: FormSubmit → limpiezabizigarbi@gmail.com.
+## Estructura
 
-Cada `push` a `main` vuelve a publicar la web (`.github/workflows/publicar.yml`).
+```
+index.html        Página principal
+privacidad.html   Aviso legal y política de privacidad
+img/              Logotipo e imágenes
+CNAME             Dominio personalizado
+robots.txt        Indicaciones para buscadores
+sitemap.xml       Mapa del sitio
+```
+
+Es una web estática: HTML, CSS y JavaScript sin dependencias ni paso de compilación.
+
+## Formulario de presupuesto
+
+El formulario envía las solicitudes por email mediante [FormSubmit](https://formsubmit.co/).
+
+## Publicación
+
+Cada cambio en la rama `main` se publica automáticamente en GitHub Pages con el flujo `.github/workflows/publicar.yml`.
+
+## Créditos
+
+Fotografías de Pexels: ver [CREDITOS.md](CREDITOS.md).
