@@ -871,7 +871,21 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     if(!/^\S+@\S+\.\S+$/.test(m)){show('Revisa el email: parece que le falta algo.',false);return;}
     if(!form.privacidad.checked){show('Marca la casilla de la política de privacidad para enviar.',false);return;}
     var btn=form.querySelector('button'); btn.disabled=true; btn.textContent='Enviando…';
-    fetch(form.action,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)})
+    var v=function(k){var el=form.elements[k];return el?String(el.value||'').trim():'';};
+    var cliente=(form.querySelector('input[name="cliente"]:checked')||{}).value||'';
+    var detalles=[v('frecuencia'),v('metros'),v('barrio')].filter(Boolean).join(' · ');
+    var fd=new FormData();
+    fd.append('access_key',v('access_key'));
+    fd.append('from_name','Web Bizi Garbi');
+    fd.append('subject','Presupuesto: '+v('servicio')+' · '+v('barrio')+' · '+n);
+    if(form.elements.botcheck&&form.elements.botcheck.checked) fd.append('botcheck','1');
+    fd.append('Nombre',n);
+    fd.append('Teléfono',t);
+    fd.append('email',m);
+    fd.append('Servicio',v('servicio')+' ('+cliente+')');
+    fd.append('Detalles',detalles);
+    if(v('mensaje')) fd.append('Mensaje',v('mensaje'));
+    fetch(form.action,{method:'POST',headers:{'Accept':'application/json'},body:fd})
       .then(function(r){return r.json();})
       .then(function(d){if(!d||!d.success)throw 0;show('¡Gracias, '+n+'! Hemos recibido tu solicitud y te enviaremos el presupuesto pronto.',true);form.reset();})
       .catch(function(){show('No se ha podido enviar. Escríbenos por WhatsApp al 642 173 743 o a limpiezabizigarbi@gmail.com.',false);})
