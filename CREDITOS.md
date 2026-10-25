@@ -11,6 +11,6 @@ Fotos de [Pexels](https://www.pexels.com/), usadas según la [licencia de Pexels
 
 Imágenes generadas con inteligencia artificial: `img/hero.jpg` y `img/oficina.jpg` (a partir de una fotografía de Jacqueline, con su consentimiento), `img/hogar.jpg`, `img/limpieza-a-fondo.jpg` y `img/mudanza.jpg`.
 
-`img/jacqueline.jpg`: fotografía de Jacqueline, cedida por ella.
+`img/jacqueline.jpg`: fotografía de Jacqueline, cedida por ella y retocada.
 
 El logotipo y los textos son propiedad de Bizi Garbi.
