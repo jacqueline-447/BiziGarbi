@@ -130,7 +130,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .trust svg{width:18px;height:18px;color:var(--leaf);flex:none}
 .hero-visual{position:relative;min-width:0}
 .hero-photo{border-radius:200px 200px var(--radius) var(--radius);overflow:hidden;aspect-ratio:4/4.3;max-width:100%;box-shadow:0 30px 60px -30px rgba(15,59,34,.45)}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:28% center}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
 .hero-badge{position:absolute;left:-22px;bottom:34px;background:var(--white);border-radius:16px;padding:14px 18px;display:flex;align-items:center;gap:12px;box-shadow:0 18px 40px -18px rgba(15,59,34,.4);max-width:260px}
 .hero-badge img{width:52px;height:52px;border-radius:10px;object-fit:cover}
 .hero-badge p{font-size:.9rem;line-height:1.35;color:var(--forest);font-weight:600}
@@ -201,7 +201,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 /* seal */
 .seal{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;background:var(--white);border:1px solid #CFE1F2;border-radius:var(--radius);padding:28px}
 .seal-mark{width:112px;height:112px;border-radius:50%;background:var(--leaf);color:var(--white);display:grid;place-items:center;text-align:center;font-family:var(--display);font-weight:800;line-height:1;font-size:1.05rem;box-shadow:inset 0 0 0 6px var(--white),inset 0 0 0 8px var(--lime)}
-.seal-mark small{display:block;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;font-family:var(--body);font-weight:700;margin-top:4px;opacity:.92}
+.seal-mark small{display:block;font-size:.5rem;letter-spacing:.04em;text-transform:uppercase;font-family:var(--body);font-weight:700;margin-top:4px;opacity:.92}
 .seal-copy{display:flex;flex-direction:column;gap:8px;min-width:0}
 .seal-copy p{color:var(--muted)}
 @media (max-width:520px){.seal{grid-template-columns:1fr}}
@@ -399,7 +399,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
       </ul>
     </div>
     <div class="hero-visual">
-      <div class="hero-photo"><img src="img/hero.jpg" alt="Mujer con guantes limpiando una mesa en un salón luminoso" width="1600" height="1067"></div>
+      <div class="hero-photo"><img src="img/hero.jpg" alt="Jacqueline, de Bizi Garbi, limpiando una mesa con productos ecológicos" width="1086" height="1167"></div>
       <div class="hero-badge">
         <img src="img/productos-eco.jpg" alt="" width="52" height="52">
         <p>Productos biodegradables<small>y bayetas de microfibra reutilizables</small></p>
@@ -443,7 +443,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 
     <div class="cards">
       <article class="svc">
-        <div class="svc-photo"><img src="img/hogar.jpg" alt="Mujer pasando la aspiradora en un salón" width="1600" height="1067" loading="lazy"></div>
+        <div class="svc-photo"><img src="img/hogar.jpg" alt="Jacqueline pasando la aspiradora en un salón" width="1020" height="638" style="object-position:center top" loading="lazy"></div>
         <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/><path d="M8 14l2.5 2.5L16 12"/></svg></div>
         <span class="tag">Semanal o quincenal</span>
         <h3>Limpieza continuada</h3>
@@ -460,7 +460,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
       </article>
 
       <article class="svc">
-        <div class="svc-photo"><img src="img/limpieza-a-fondo.jpg" alt="Limpiadora sonriente con un cubo de productos de limpieza" width="1600" height="1067" loading="lazy"></div>
+        <div class="svc-photo"><img src="img/limpieza-a-fondo.jpg" alt="Jacqueline limpiando con vapor los azulejos de una cocina" width="1010" height="632" style="object-position:center top" loading="lazy"></div>
         <div class="svc-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></div>
         <span class="tag blue">Por horas o puntual</span>
         <h3>Limpieza a fondo</h3>
@@ -538,7 +538,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
         </div>
       </div>
       <article class="svc">
-        <div class="svc-photo"><img src="img/oficina.jpg" alt="Persona limpiando un escritorio con pulverizador y bayeta" width="1600" height="1067" loading="lazy"></div>
+        <div class="svc-photo"><img src="img/oficina.jpg" alt="Jacqueline limpiando una pantalla de ordenador en una oficina" width="680" height="424" style="object-position:center top" loading="lazy"></div>
         <h3>Todo en digital y sin papeles</h3>
         <ul class="checks blue">
           <li>Presupuestos, contratos y facturas por email</li>
