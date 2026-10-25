@@ -747,12 +747,13 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
       </div>
     </div>
 
-    <form class="form" id="presupuesto" action="https://formsubmit.co/limpiezabizigarbi@gmail.com" method="POST" novalidate>
+    <form class="form" id="presupuesto" action="https://api.web3forms.com/submit" method="POST" novalidate>
       <h3>Tu presupuesto</h3>
       <p class="sub">Gratis y sin compromiso. Te contestamos por email o teléfono.</p>
-      <input type="hidden" name="_subject" value="Nueva solicitud de presupuesto · Bizi Garbi">
-      <input type="hidden" name="_template" value="table">
-      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input type="hidden" name="access_key" value="5c95b05e-9bcb-4df5-8e02-b9dfa758ab08">
+      <input type="hidden" name="subject" value="Nueva solicitud de presupuesto · Bizi Garbi">
+      <input type="hidden" name="from_name" value="Web Bizi Garbi">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
       <fieldset class="field full">
         <legend>¿Para dónde es?</legend>
@@ -870,9 +871,9 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     if(!/^\S+@\S+\.\S+$/.test(m)){show('Revisa el email: parece que le falta algo.',false);return;}
     if(!form.privacidad.checked){show('Marca la casilla de la política de privacidad para enviar.',false);return;}
     var btn=form.querySelector('button'); btn.disabled=true; btn.textContent='Enviando…';
-    fetch(form.action.replace('formsubmit.co/','formsubmit.co/ajax/'),{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)})
-      .then(function(r){if(!r.ok)throw 0;return r.json();})
-      .then(function(){show('¡Gracias, '+n+'! Hemos recibido tu solicitud y te enviaremos el presupuesto pronto.',true);form.reset();})
+    fetch(form.action,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)})
+      .then(function(r){return r.json();})
+      .then(function(d){if(!d||!d.success)throw 0;show('¡Gracias, '+n+'! Hemos recibido tu solicitud y te enviaremos el presupuesto pronto.',true);form.reset();})
       .catch(function(){show('No se ha podido enviar. Escríbenos por WhatsApp al 642 173 743 o a limpiezabizigarbi@gmail.com.',false);})
       .finally(function(){btn.disabled=false;btn.textContent='Enviar solicitud';});
   });

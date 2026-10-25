@@ -17,7 +17,7 @@ Es una web estática: HTML, CSS y JavaScript sin dependencias ni paso de compila
 
 ## Formulario de presupuesto
 
-El formulario envía las solicitudes por email mediante [FormSubmit](https://formsubmit.co/).
+El formulario envía las solicitudes por email mediante [Web3Forms](https://web3forms.com/).
 
 ## Publicación
 
