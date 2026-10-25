@@ -751,7 +751,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
       <h3>Tu presupuesto</h3>
       <p class="sub">Gratis y sin compromiso. Te contestamos por email o teléfono.</p>
       <input type="hidden" name="access_key" value="5c95b05e-9bcb-4df5-8e02-b9dfa758ab08">
-      <input type="hidden" name="subject" value="Nueva solicitud de presupuesto · Bizi Garbi">
+      <input type="hidden" name="subject" value="Solicitud de presupuesto · Bizi Garbi">
       <input type="hidden" name="from_name" value="Web Bizi Garbi">
       <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
@@ -877,7 +877,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     var fd=new FormData();
     fd.append('access_key',v('access_key'));
     fd.append('from_name','Web Bizi Garbi');
-    fd.append('subject','Presupuesto: '+v('servicio')+' · '+v('barrio')+' · '+n);
+    fd.append('subject','Solicitud de presupuesto: '+[n,v('barrio'),v('servicio')].filter(Boolean).join(' · '));
     if(form.elements.botcheck&&form.elements.botcheck.checked) fd.append('botcheck','1');
     fd.append('Nombre',n);
     fd.append('Teléfono',t);
