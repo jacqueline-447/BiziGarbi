@@ -220,12 +220,15 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 @media (max-width:900px){.split{grid-template-columns:1fr;gap:36px}.split.rev .split-img{order:0}}
 
 /* story */
-.story{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
-.story blockquote{margin:0;font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.18;color:var(--forest);padding-left:22px;border-left:5px solid var(--lime);text-wrap:balance}
-.story-eyebrow{margin-bottom:18px}
+.story{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:center}
+.story-photo{margin:0;position:relative;max-width:420px;width:100%;justify-self:center}
+.story-photo img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:200px 200px var(--radius) var(--radius);box-shadow:0 30px 60px -30px rgba(15,59,34,.45)}
+.story-photo figcaption{position:absolute;left:-18px;bottom:28px;background:var(--white);border-radius:14px;padding:12px 18px;box-shadow:0 18px 40px -18px rgba(15,59,34,.4);font-size:.88rem;color:var(--muted);line-height:1.3}
+.story-photo figcaption strong{display:block;font-family:var(--display);font-size:1.15rem;color:var(--forest)}
+.story blockquote{margin:0 0 6px;font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.18;color:var(--forest);padding-left:22px;border-left:5px solid var(--lime);text-wrap:balance}
 .story-copy{display:flex;flex-direction:column;gap:16px;color:var(--muted);min-width:0}
 .story-copy p{max-width:62ch}
-@media (max-width:900px){.story{grid-template-columns:1fr;gap:28px}}
+@media (max-width:900px){.story{grid-template-columns:1fr;gap:36px}.story-photo{max-width:340px}.story-photo figcaption{left:0}}
 
 /* method */
 .method{display:grid;grid-template-columns:repeat(3,1fr);gap:36px 40px}
@@ -443,7 +446,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 
     <div class="cards">
       <article class="svc">
-        <div class="svc-photo"><img src="img/hogar.jpg" alt="Jacqueline pasando la aspiradora en un salón" width="1020" height="638" style="object-position:center top" loading="lazy"></div>
+        <div class="svc-photo"><img src="img/hogar.jpg" alt="Limpiadora con uniforme verde pasando la aspiradora en un salón" width="1200" height="750" loading="lazy"></div>
         <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/><path d="M8 14l2.5 2.5L16 12"/></svg></div>
         <span class="tag">Semanal o quincenal</span>
         <h3>Limpieza continuada</h3>
@@ -460,7 +463,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
       </article>
 
       <article class="svc">
-        <div class="svc-photo"><img src="img/limpieza-a-fondo.jpg" alt="Jacqueline limpiando con vapor los azulejos de una cocina" width="1010" height="632" style="object-position:center top" loading="lazy"></div>
+        <div class="svc-photo"><img src="img/limpieza-a-fondo.jpg" alt="Limpieza con vapor de los azulejos de una cocina" width="1200" height="750" loading="lazy"></div>
         <div class="svc-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></div>
         <span class="tag blue">Por horas o puntual</span>
         <h3>Limpieza a fondo</h3>
@@ -474,7 +477,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
       </article>
 
       <article class="svc">
-        <div class="svc-photo"><img src="img/mudanza.jpg" alt="Pareja entrando con cajas en su piso nuevo" width="867" height="1300" loading="lazy"></div>
+        <div class="svc-photo"><img src="img/mudanza.jpg" alt="Fregado del suelo de un piso vacío antes de la mudanza" width="1200" height="750" loading="lazy"></div>
         <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h11v8H3z"/><path d="M14 12h4l3 3v2h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></div>
         <span class="tag">Mudanzas y alquiler</span>
         <h3>Entrada o salida de piso</h3>
@@ -593,11 +596,13 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 <!-- HISTORIA -->
 <section class="section" id="nosotros">
   <div class="wrap story">
-    <div>
-      <p class="eyebrow story-eyebrow">Por qué nació Bizi Garbi</p>
-      <blockquote>¿Por qué limpiar un espacio para hacerlo saludable si el proceso de limpieza lo termina contaminando?</blockquote>
-    </div>
+    <figure class="story-photo">
+      <img src="img/jacqueline.jpg" alt="Jacqueline, fundadora de Bizi Garbi" width="800" height="1000" loading="lazy">
+      <figcaption><strong>Jacqueline</strong>Fundadora de Bizi Garbi</figcaption>
+    </figure>
     <div class="story-copy">
+      <p class="eyebrow">Por qué nació Bizi Garbi</p>
+      <blockquote>¿Por qué limpiar un espacio para hacerlo saludable si el proceso de limpieza lo termina contaminando?</blockquote>
       <p>Esa pregunta es el origen de Bizi Garbi. Pasando más tiempo en casa y en la oficina, vimos el efecto que tienen el amoníaco, la lejía y los detergentes industriales en el aire que respiramos: alergias y problemas respiratorios en familias y trabajadores.</p>
       <p>Mientras en Bilbao cada vez más gente recicla, compra de cercanía y cuida su huella de carbono, la limpieza tradicional sigue usando químicos corrosivos, plásticos de un solo uso y mucha agua.</p>
       <p>Por eso montamos una empresa de limpieza diferente: productos certificados comprados a granel a distribuidores locales, bayetas reutilizables, vapor seco y desplazamientos en transporte público.</p>
