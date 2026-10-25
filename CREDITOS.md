@@ -9,7 +9,7 @@ Fotos de [Pexels](https://www.pexels.com/), usadas según la [licencia de Pexels
 | `img/txoko.jpg` | [Friends Having Dinner](https://www.pexels.com/photo/friends-having-delicious-dinner-with-drinks-served-on-wooden-table-5638730/) |
 | `img/bilbao-guggenheim.jpg` | [Guggenheim Museum Bilbao](https://www.pexels.com/photo/guggenheim-museum-bilbao-14638004/) |
 
-Imágenes generadas con inteligencia artificial: `img/oficina.jpg` (a partir de una fotografía de Jacqueline, con su consentimiento), `img/hero.jpg`, `img/hogar.jpg`, `img/limpieza-a-fondo.jpg` y `img/mudanza.jpg`.
+Imágenes generadas con inteligencia artificial: `img/hero.jpg`, `img/hogar.jpg`, `img/limpieza-a-fondo.jpg`, `img/mudanza.jpg` y `img/oficina.jpg`.
 
 `img/jacqueline.jpg`: fotografía de Jacqueline, cedida por ella y retocada.
 
