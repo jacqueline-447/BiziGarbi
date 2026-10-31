@@ -72,7 +72,9 @@ section{scroll-margin-top:70px}
 .wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
 .eyebrow{font-weight:700;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--water)}
 .lead{font-size:1.15rem;color:var(--muted);max-width:62ch}
-:focus-visible{outline:3px solid var(--water);outline-offset:3px;border-radius:6px}
+html{-webkit-tap-highlight-color:transparent}
+:focus{outline:none}
+:focus-visible{outline:3px solid var(--water);outline-offset:3px}
 
 /* buttons */
 .btn{display:inline-flex;align-items:center;gap:.55em;font:700 1rem/1 var(--body);padding:.95em 1.5em;border-radius:999px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s ease, background .15s ease}
